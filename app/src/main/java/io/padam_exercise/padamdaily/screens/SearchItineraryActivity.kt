@@ -50,6 +50,7 @@ class SearchItineraryActivity : AppCompatActivity() {
 
     private fun initArrivalSpinner() {
         // TODO: Implement data
+
         /* Implementation of the 'arrival spinner' by filling it with 'arrivalList'
           setting up the adapter for spinner
          */
