@@ -6,4 +6,9 @@
 
 
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBlTAwfQA5D-U8S8PSS8bl9dlf56vR-lKc</string>
+
+
+
+    <string name="title_departure">Departure</string>
+    <string name="title_arrival">Arrival</string>
 </resources>

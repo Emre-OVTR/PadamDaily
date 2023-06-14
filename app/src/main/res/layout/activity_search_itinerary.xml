@@ -18,20 +18,44 @@
         android:padding="@dimen/large_padding"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <TextView
+            android:id="@+id/title_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_departure"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/spinner_departure"
+            app:layout_constraintTop_toTopOf="@+id/cl_search" />
+
         <Spinner
             android:id="@+id/spinner_departure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_origin"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/spinner_padam"
+            app:layout_constraintTop_toBottomOf="@+id/title_departure"  />
+
+
+        <TextView
+            android:id="@+id/title_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_arrival"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/spinner_arrival"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_departure"/>
 
         <Spinner
             android:id="@+id/spinner_arrival"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/default_margin"
             android:hint="@string/hint_destination"
-            app:layout_constraintTop_toBottomOf="@id/spinner_departure" />
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/spinner_padam"
+            app:layout_constraintTop_toBottomOf="@id/title_arrival"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_search_itinerary"
@@ -39,6 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
             android:text="@string/action_search"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/spinner_padam"
             app:layout_constraintTop_toBottomOf="@id/spinner_arrival" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
