@@ -64,7 +64,7 @@
             android:layout_marginTop="@dimen/default_margin"
             android:text="@string/action_search"
             android:backgroundTint="@color/colorPrimary"
-            android:background="@drawable/spinner_padam"
+            android:background="@drawable/search_button_padam"
             app:layout_constraintTop_toBottomOf="@id/spinner_arrival" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
