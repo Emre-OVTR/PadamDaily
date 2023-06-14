@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PadamDaily.iml" filepath="$PROJECT_DIR$/.idea/modules/PadamDaily.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PadamDaily.app.unitTest.iml" />
     </modules>
   </component>
 </project>
