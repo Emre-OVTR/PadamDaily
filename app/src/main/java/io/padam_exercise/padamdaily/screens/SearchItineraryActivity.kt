@@ -50,6 +50,12 @@ class SearchItineraryActivity : AppCompatActivity() {
 
     private fun initArrivalSpinner() {
         // TODO: Implement data
+        /* Implementation of the 'arrival spinner' by filling it with 'arrivalList'
+          setting up the adapter for spinner
+         */
+        val arrivalList = Toolbox.getStringListFromSuggestion(MockSuggestion.arrivals())
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, arrivalList)
+        spinner_arrival.adapter = adapter
     }
 
     private fun manageOnClickSearchItinerary() {
