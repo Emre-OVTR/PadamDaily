@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="padam_exercise.padamdaily">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- have deleted namespace as it's not supported -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"

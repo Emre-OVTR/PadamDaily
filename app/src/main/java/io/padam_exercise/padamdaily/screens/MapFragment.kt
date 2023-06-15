@@ -9,12 +9,13 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
+import io.padam_exercise.padamdaily.R
 import io.padam_exercise.padamdaily.models.MarkerType
 import io.padam_exercise.padamdaily.models.Suggestion
-import padam_exercise.padamdaily.R
 
 /**
  * Map Fragment
@@ -39,14 +40,24 @@ class MapFragment : Fragment(), OnMapReadyCallback, MapActionsDelegate {
         }
     }
 
-    override fun updateMarker(markerType: MarkerType, suggestion: Suggestion) {
+
+    override fun updateMarker(markerTypes: List<MarkerType>, suggestions: List<Suggestion>) {
+
         mMap?.let {
+            // for-loop to get Objects! Suggestion and MarkerType
+            for (i in suggestions.indices){
+                val suggestion = suggestions[i]
+                val markerType = markerTypes[i]
+
             val marker = MarkerOptions()
                 .position(suggestion.latLng)
                 .title(suggestion.name)
-            it.addMarker(marker)
+            //new value to custom markers color by they type
+            val addedMarker = it.addMarker(marker)
+            //change made with color: Float parameter at MarkerTypeEnum class
+            addedMarker?.setIcon(BitmapDescriptorFactory.defaultMarker(markerType.color))
         }
-    }
+    }}
 
     override fun clearMap() {
         mMap?.clear()
@@ -69,6 +80,8 @@ class MapFragment : Fragment(), OnMapReadyCallback, MapActionsDelegate {
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
+
+
         mMap = googleMap
         mMap?.moveCamera(
             CameraUpdateFactory.newLatLngZoom(

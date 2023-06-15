@@ -11,9 +11,11 @@ import io.padam_exercise.padamdaily.models.Suggestion
 interface MapActionsDelegate {
 
     fun updateMap(vararg latLngArgs: LatLng?)
-
-    fun updateMarker(markerType: MarkerType, suggestion: Suggestion)
+    // changed function attributes to call updateMarker once in SearchItineraryActivity
+    // fun updateMarker(markerType: MarkerType, suggestion: Suggestion)
+    fun updateMarker(markerTypes: List<MarkerType>, suggestions: List<Suggestion>)
 
     fun clearMap()
+
 
 }
